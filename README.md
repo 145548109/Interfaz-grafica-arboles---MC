@@ -1,7 +1,2 @@
-# Interfaz-grafica-rboles---MC-_AT
+# Interfaz-grafica-Arboles---MC
 Taller: Interfaz gráfica.
-Integrantes:
-
-Marco Castillo
-
-Ariel Tandazo
