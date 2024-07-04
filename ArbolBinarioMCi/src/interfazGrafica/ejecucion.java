@@ -24,9 +24,6 @@ public class ejecucion {
     
     public static void main(String[] args) {
         ArbolBinario arbol = new ArbolBinario();
-        arbol.agregarNodo(17);
-        arbol.agregarNodo(10);
-        arbol.agregarNodo(23);
 
         System.out.println("\nRecorrido PreOrden: ");
         //arbol.recorrerPreOrden();
