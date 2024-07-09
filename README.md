@@ -1,5 +1,5 @@
 # Interfaz-grafica-Arboles---MC
-Taller: Interfaz gráfica.
+### Taller: Interfaz gráfica.
 
 Autor: Marco Castillo
 
