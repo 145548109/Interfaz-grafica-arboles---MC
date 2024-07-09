@@ -24,7 +24,7 @@ public class VistaArbol extends JPanel {
         recorridoArea.setBorder(BorderFactory.createTitledBorder("Recorridos"));
         
         JScrollPane scrollPane = new JScrollPane(recorridoArea);
-        add(scrollPane, BorderLayout.SOUTH);
+        add(scrollPane, BorderLayout.SOUTH); // Mueve el JTextArea más abajo
     }
 
     @Override
