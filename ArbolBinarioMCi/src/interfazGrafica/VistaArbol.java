@@ -1,25 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package interfazGrafica;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.BorderFactory;
+import java.awt.BorderLayout;
 
-/**
- *
- * @author macas
- */
 public class VistaArbol extends JPanel {
 
     private ArbolBinario arbol;
     private NodoArbol aux;
     private int radio = 20;
     private int verticalSeparation = 50;
+    private JTextArea recorridoArea;
 
     public VistaArbol(ArbolBinario arbol) {
         this.arbol = arbol;
+        setLayout(new BorderLayout());
+        
+        recorridoArea = new JTextArea(5, 20);
+        recorridoArea.setEditable(false);
+        recorridoArea.setBorder(BorderFactory.createTitledBorder("Recorridos"));
+        
+        JScrollPane scrollPane = new JScrollPane(recorridoArea);
+        add(scrollPane, BorderLayout.SOUTH);
     }
 
     @Override
@@ -60,5 +65,8 @@ public class VistaArbol extends JPanel {
         this.aux = nodo;        
         repaint();
     }
-
+    
+    public void actualizarRecorrido(String recorrido) {
+        recorridoArea.setText(recorrido);
+    }
 }
