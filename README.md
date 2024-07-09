@@ -6,7 +6,7 @@ Realizado individualmente por: Marco Castillo
 ### DESCRIPCIÓN:
 
 Se creo una interfaz gráfica, la cual permite ingresar numeros (nodos) los cuales se iran presentando en pantalla formando un arbol binario, el cual nos brindara la posiblidad de:
-#### Realizar el reocrrido en:
+#### Realizar el recorrido en:
 - **preorden**
 - **inorden**
 - **postorden**
