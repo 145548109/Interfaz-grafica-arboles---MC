@@ -29,7 +29,7 @@ Se creo una interfaz gráfica, la cual permite ingresar numeros (nodos) los cual
 ### Recorrido inOrden
 ![image](https://github.com/145548109/Interfaz-grafica-arboles---MC/assets/166523628/ceea7f34-3ded-4e0c-9c9f-b7b5bc93bb22)
 
-### Recorrido postRrden
+### Recorrido postOrden
 ![image](https://github.com/145548109/Interfaz-grafica-arboles---MC/assets/166523628/bbc7924f-2f0f-4f15-88b9-b6f56a344d4c)
 
 ### Recorrido preOrden
