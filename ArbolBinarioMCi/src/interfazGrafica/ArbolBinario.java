@@ -1,23 +1,18 @@
-
 package interfazGrafica;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- *
- * @author macas
- */
 public class ArbolBinario extends EstructuraDeDato {
 
     private int altura;
     private NodoArbol nodoRaiz;
     private VistaArbol viewTree;
-    private String aux; 
+    private String aux;
 
     public String getAux() {
         return aux;
     }
-    
+
     public VistaArbol getViewTree() {
         return viewTree;
     }
@@ -93,16 +88,18 @@ public class ArbolBinario extends EstructuraDeDato {
     public void buscarPorDato(int dato) {
     }
 
-    //PreOrden: Raiz, Izquierdo, Derecho
+    // PreOrden: Raiz, Izquierdo, Derecho
     public void recorrerPreOrden() {
-        this.preOrden(this.nodoRaiz);
+        StringBuilder recorrido = new StringBuilder();
+        this.preOrden(this.nodoRaiz, recorrido);
+        viewTree.actualizarRecorrido(recorrido.toString());
     }
 
-    private void preOrden(NodoArbol nodo) {
+    private void preOrden(NodoArbol nodo, StringBuilder recorrido) {
         if (nodo == null) {
-            return; //Detener recursividad
+            return; // Detener recursividad
         } else {
-            System.out.print(nodo.getValor() + " - ");
+            recorrido.append(nodo.getValor()).append(" - ");
             viewTree.updateView(nodo);
             try {
                 // Pausa de 1 segundo
@@ -110,25 +107,23 @@ public class ArbolBinario extends EstructuraDeDato {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            preOrden(nodo.getNodoIzquierdo());
-            preOrden(nodo.getNodoDerecho());
-
+            preOrden(nodo.getNodoIzquierdo(), recorrido);
+            preOrden(nodo.getNodoDerecho(), recorrido);
         }
     }
 
-    //InOrden: Izquierdo, Raiz, Derecho
+    // InOrden: Izquierdo, Raiz, Derecho
     public void recorrerInOrden() {
-        this.aux= "";
-        inOrden(this.nodoRaiz);
+        StringBuilder recorrido = new StringBuilder();
+        this.inOrden(this.nodoRaiz, recorrido);
+        viewTree.actualizarRecorrido(recorrido.toString());
     }
 
-    private void inOrden(NodoArbol nodo) {
+    private void inOrden(NodoArbol nodo, StringBuilder recorrido) {
         if (nodo == null) {
-            return; //Detener recursividad
+            return; // Detener recursividad
         } else {
-            
-            inOrden(nodo.getNodoIzquierdo());
-            
+            inOrden(nodo.getNodoIzquierdo(), recorrido);
             viewTree.updateView(nodo);
             try {
                 // Pausa de 1 segundo
@@ -136,26 +131,24 @@ public class ArbolBinario extends EstructuraDeDato {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            this.aux += nodo.getValor() + " - ";
-            System.out.print(nodo.getValor() + " - ");
-            inOrden(nodo.getNodoDerecho());
-           
+            recorrido.append(nodo.getValor()).append(" - ");
+            inOrden(nodo.getNodoDerecho(), recorrido);
         }
     }
-    
-    
 
-    //PostOrden: Izquierdo, Derecho, Raiz
+    // PostOrden: Izquierdo, Derecho, Raiz
     public void recorrerPostOrden() {
-        this.postOrden(this.nodoRaiz);
+        StringBuilder recorrido = new StringBuilder();
+        this.postOrden(this.nodoRaiz, recorrido);
+        viewTree.actualizarRecorrido(recorrido.toString());
     }
 
-    public void postOrden(NodoArbol nodo) {
+    public void postOrden(NodoArbol nodo, StringBuilder recorrido) {
         if (nodo == null) {
-            return; //Detener recursividad
+            return; // Detener recursividad
         } else {
-            postOrden(nodo.getNodoIzquierdo());
-            postOrden(nodo.getNodoDerecho());
+            postOrden(nodo.getNodoIzquierdo(), recorrido);
+            postOrden(nodo.getNodoDerecho(), recorrido);
             viewTree.updateView(nodo);
             try {
                 // Pausa de 1 segundo
@@ -163,7 +156,7 @@ public class ArbolBinario extends EstructuraDeDato {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.print(nodo.getValor() + " - ");
+            recorrido.append(nodo.getValor()).append(" - ");
         }
     }
 }
