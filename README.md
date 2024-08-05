@@ -3,18 +3,22 @@
 
 Realizado individualmente por: Marco Castillo
 
+### REQUERIENTOS DEL TALLER:
+
+Generar una interfaz gráfica de escritorio, que soporte los elementos de un árbol binario de búsqueda y pinte el recorrido tanto en preorden, inorden y postorden
+
 ### DESCRIPCIÓN:
 
-Se creo una interfaz gráfica, la cual permite ingresar números (nodos) los cuales se iran presentando en pantalla formando un árbol binario, el cual nos brindara la posiblidad de:
+Se creo una interfaz gráfica, la cual permite ingresar números (nodos) los cuales se iran presentando en pantalla formando un árbol binario, para ello considere colocar colores referentes que simulen un árbol: verde, marron, amarillo., la presente inferfaz nos brindara la posiblidad de:
 #### Realizar el recorrido en:
 - **preorden**
 - **inorden**
 - **postorden**
 
+- **ingresar nodo.** 
 - **eliminar nodo.**
 - **Pintar el árbol de acuerdo al recorrido**
 - **Presentar el recorrido de manera textual**
-
 
 ### EJECUCIÓN: 
 - Para su ejecución, realizarlo en NetBeans.
