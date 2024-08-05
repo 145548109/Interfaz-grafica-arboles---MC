@@ -15,6 +15,7 @@ Se creo una interfaz gráfica, la cual permite ingresar números (nodos) los cua
 - **inorden**
 - **postorden**
 
+#### Funcionamiento:
 - **ingresar nodo.** 
 - **eliminar nodo.**
 - **Pintar el árbol de acuerdo al recorrido**
