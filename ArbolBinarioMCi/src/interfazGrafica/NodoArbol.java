@@ -77,7 +77,5 @@ public class NodoArbol extends Nodo{
         }
 
         return root;
-    }
-
-    
+    }   
 }

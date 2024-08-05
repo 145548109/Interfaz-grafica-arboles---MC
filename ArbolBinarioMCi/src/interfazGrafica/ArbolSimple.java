@@ -10,13 +10,7 @@ package interfazGrafica;
  */
 public class ArbolSimple extends ArbolBinario {
     
-    
-    
     public void eliminarPorValor(int valor){
         
-    }
-    
-    
-   
-    
+    }  
 }

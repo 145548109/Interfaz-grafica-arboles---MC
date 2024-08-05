@@ -88,7 +88,6 @@ public class ArbolBinario extends EstructuraDeDato {
     public void buscarPorDato(int dato) {
     }
 
-    // PreOrden: Raiz, Izquierdo, Derecho
     public void recorrerPreOrden() {
         StringBuilder recorrido = new StringBuilder();
         this.preOrden(this.nodoRaiz, recorrido);
@@ -97,12 +96,11 @@ public class ArbolBinario extends EstructuraDeDato {
 
     private void preOrden(NodoArbol nodo, StringBuilder recorrido) {
         if (nodo == null) {
-            return; // Detener recursividad
+            return;
         } else {
             recorrido.append(nodo.getValor()).append(" - ");
             viewTree.updateView(nodo);
             try {
-                // Pausa de 1 segundo
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -112,7 +110,6 @@ public class ArbolBinario extends EstructuraDeDato {
         }
     }
 
-    // InOrden: Izquierdo, Raiz, Derecho
     public void recorrerInOrden() {
         StringBuilder recorrido = new StringBuilder();
         this.inOrden(this.nodoRaiz, recorrido);
@@ -121,7 +118,7 @@ public class ArbolBinario extends EstructuraDeDato {
 
     private void inOrden(NodoArbol nodo, StringBuilder recorrido) {
         if (nodo == null) {
-            return; // Detener recursividad
+            return;
         } else {
             inOrden(nodo.getNodoIzquierdo(), recorrido);
             viewTree.updateView(nodo);
@@ -136,7 +133,6 @@ public class ArbolBinario extends EstructuraDeDato {
         }
     }
 
-    // PostOrden: Izquierdo, Derecho, Raiz
     public void recorrerPostOrden() {
         StringBuilder recorrido = new StringBuilder();
         this.postOrden(this.nodoRaiz, recorrido);
@@ -145,13 +141,13 @@ public class ArbolBinario extends EstructuraDeDato {
 
     public void postOrden(NodoArbol nodo, StringBuilder recorrido) {
         if (nodo == null) {
-            return; // Detener recursividad
+            return;
         } else {
             postOrden(nodo.getNodoIzquierdo(), recorrido);
             postOrden(nodo.getNodoDerecho(), recorrido);
             viewTree.updateView(nodo);
             try {
-                // Pausa de 1 segundo
+
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
