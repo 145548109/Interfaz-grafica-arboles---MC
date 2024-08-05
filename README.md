@@ -1,7 +1,7 @@
 # Interfaz-grafica-Arboles---MC
 ### Taller: Interfaz gráfica.
 
-Realizado individualmente por: Marco Castillo
+Realizado por: Marco Castillo
 
 ### REQUERIENTOS DEL TALLER:
 
